@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAEC Result Attestation/Correction Form</title>
+    <meta name="description" content="Official WAEC form for result attestation, verification, or clerical corrections">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-serif">
+    <!-- Navbar -->
+    <!-- Navigation Bar Component -->
+<nav class="px-4 sm:px-6 lg:px-10 sticky top-4 z-50">
+    <div class="mx-auto container">
+        <div class="bg-white/90 backdrop-blur-sm rounded-xl border border-gray-200 pr-3 py-3 pl-6 shadow-lg shadow-black/10 z-50 mt-6 relative">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Site Name -->
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                    <img src="assets/waec-logo-600x170.png" alt="WAEC Logo" class="h-12 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gray-900 hover:text-blue-600 transition-colors relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="results-upgrade-new.html" class="font-medium text-blue-600 hover:text-blue-700 transition-colors relative group">
+                        Results Upgrade
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
+                    </a>
+                    <a href="blog.html" class="font-medium text-gray-900 hover:text-blue-600 transition-colors relative group">
+                        Blog
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="contact.html" class="font-medium text-gray-900 hover:text-blue-600 transition-colors relative group">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="results-upgrade-new.html" class="ml-4 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="lg:hidden hidden mt-4 space-y-2 pb-3" id="mobile-menu">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                <a href="results-upgrade-new.html" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-50 text-blue-700">Results Upgrade</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900">Blog</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900">Contact</a>
+                <a href="results-upgrade-new.html" class="block px-3 py-2 mt-2 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                
+                // Toggle between menu and close icon
+                const menuIcon = mobileMenuButton.querySelector('svg:first-child');
+                if (isExpanded) {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                } else {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+                }
+            });
+        }
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                const menuIcon = mobileMenuButton.querySelector('svg:first-child');
+                menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            });
+        });
+    });
+</script>
+
+
+    <!-- Form Section -->
+    <section class="min-h-screen py-12 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">WAEC Result Attestation/Correction Form</h1>
+                <p class="text-lg text-gray-600">Submit requests for result attestation, verification, or clerical corrections (e.g., name errors). Grade changes are not permitted.</p>
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-6 max-w-2xl mx-auto">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-blue-700"><strong>Note:</strong> Fields marked with * are required. Payments must be sent to the Telecel Cash details below via Telecel Play or *110#.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Form -->
+            <form id="requestForm" action="upgrade-success.html" method="GET" class="space-y-8" novalidate>
+                <!-- Personal Information -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-blue-600 font-bold">1</span>
+                        </div>
+                        Personal Information
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter full name as on WAEC documents" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="dateOfBirth" class="block text-sm font-medium text-gray-700 mb-2">Date of Birth *</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">Gender *</label>
+                                <select id="gender" name="gender" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nationality" class="block text-sm font-medium text-gray-700 mb-2">Nationality *</label>
+                                <select id="nationality" name="nationality" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select Nationality</option>
+                                    <option value="ghanaian">Ghanaian</option>
+                                    <option value="nigerian">Nigerian</option>
+                                    <option value="sierra-leonean">Sierra Leonean</option>
+                                    <option value="gambian">Gambian</option>
+                                    <option value="liberian">Liberian</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="phoneNumber" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Enter phone number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter email address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Examination Details -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-green-600 font-bold">2</span>
+                        </div>
+                        Examination Details
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="examType" class="block text-sm font-medium text-gray-700 mb-2">Examination Type *</label>
+                                <select id="examType" name="examType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" onchange="updateExamType()">
+                                    <option value="">Select Type</option>
+                                    <option value="wassce">WASSCE</option>
+                                    <option value="novdec">NOVDEC</option>
+                                    <option value="bece">BECE</option>
+                                    <option value="abce">ABCE</option>
+                                    <option value="gbce">GBCE</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="examTime" class="block text-sm font-medium text-gray-700 mb-2">Examination Time *</label>
+                                <input type="text" id="examTime" name="examTime" required placeholder="e.g., May/June 2023" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="indexNumber" class="block text-sm font-medium text-gray-700 mb-2">Index Number *</label>
+                                <input type="text" id="indexNumber" name="indexNumber" required placeholder="Enter index number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div>
+                                <label for="centerName" class="block text-sm font-medium text-gray-700 mb-2">Center Name *</label>
+                                <input type="text" id="centerName" name="centerName" required placeholder="Enter exam center name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="examYear" class="block text-sm font-medium text-gray-700 mb-2">Examination Year *</label>
+                                <select id="examYear" name="examYear" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                                    <option value="">Select Year</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="schoolAttended" class="block text-sm font-medium text-gray-700 mb-2">School Attended *</label>
+                                <input type="text" id="schoolAttended" name="schoolAttended" required placeholder="Enter school name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Selection -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-purple-600 font-bold">3</span>
+                        </div>
+                        Subjects for Verification/Correction
+                    </h2>
+                    <p class="text-gray-600 mb-6">Select subjects for attestation or correction. Grade changes are permitted.</p>
+                    <div id="coreSubjectsContainer" class="space-y-4">
+                        <h3 class="text-lg font-semibold">Core Subjects</h3>
+                        <!-- Core subjects load here -->
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold mb-3">Elective Subjects</h3>
+                        <div id="electivesContainer" class="space-y-4"></div>
+                        <button type="button" 
+                                onclick="addElectiveRow()" 
+                                class="mt-4 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 font-medium shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                            <span>Add Elective Subject</span>
+                        </button>
+                        <p class="mt-2 text-sm text-gray-500 text-center sm:text-left">
+                            Add all your elective subjects one by one
+                        </p>
+                    </div>
+                    <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-medium text-gray-700">AMOUNT:</span>
+                            <span id="subjectAmount" class="text-lg font-bold text-green-600">GHC 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Details -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-orange-600 font-bold">4</span>
+                        </div>
+                        Certificate Details
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="certificateSerialNumber" class="block text-sm font-medium text-gray-700 mb-2">Certificate Serial Number (Optional)</label>
+                                <input type="text" id="certificateSerialNumber" name="certificateSerialNumber" placeholder="e.g., SC0000001" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <div>
+                                <label for="candidateReferenceNumber" class="block text-sm font-medium text-gray-700 mb-2">Candidate Reference Number / EID (Optional)</label>
+                                <input type="text" id="candidateReferenceNumber" name="candidateReferenceNumber" placeholder="Enter EID" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="additionalNotes" class="block text-sm font-medium text-gray-700 mb-2">Additional Notes (Optional)</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="e.g., Specify correction needed or re-marking request" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Information -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+                        <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-yellow-600 font-bold">5</span>
+                        </div>
+                        Payment Information
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">Please send payment to the following Telecel Cash details via Telecel Play or *110#:</p>
+                            <p class="text-base font-bold text-gray-900">Account Name: ERIC OSEI</p>
+                            <p class="text-base font-bold text-gray-900">Telecel Cash Number: +233 206 398 967</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="transactionId" class="block text-sm font-medium text-gray-700 mb-2">Transaction ID (Optional)</label>
+                                <input type="text" id="transactionId" name="transactionId" placeholder="Enter transaction ID for payment tracking" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label for="file-upload" class="block text-sm font-medium text-gray-700 mb-2">Upload Payment Proof <span class="text-red-500">*</span></label>
+                                <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+                                    <div class="space-y-1 text-center">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <div class="flex text-sm text-gray-600">
+                                            <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                <span>Upload a file</span>
+                                                <input id="file-upload" name="file-upload" type="file" class="sr-only" required accept="image/*,.pdf" data-max-size="5MB">
+                                            </label>
+                                            <p class="pl-1">or drag and drop</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500">
+                                            PNG, JPG, PDF up to 5MB (required)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Section -->
+                <div class="text-center">
+                    <button type="submit" class="w-full md:w-auto px-12 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg hover:bg-green-700">Submit Request</button>
+                    <p class="mt-3 text-sm text-gray-500">
+                        By submitting, you agree to WAEC's <a href="#" class="text-blue-600 hover:underline" onclick="openLegalPopup('terms')">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline" onclick="openLegalPopup('privacy')">Privacy Policy</a>. Payments via Telecel Cash or official WAEC portal.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-8 pt-24 pb-8 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzAgMTVjLTguMjg0IDAtMTUgNi43MTYtMTUgMTVzNi43MTYgMTUgMTUgMTUgMTUtNi43MTYgMTUtMTUtNi43MTYtMTUtMTUtMTVtMC0xNWMxNi41NDIgMCAzMCAxMy40NTggMzAgMzBzLTEzLjQ1OCAzMC0zMCAzMFMwIDQ2LjU0MiAwIDMwIDEzLjQ1OCAwIDMwIDBtMCAxOGM2LjYyNyAwIDEyIDUuMzczIDEyIDEycy01LjM3MyAxMi0xMiAxMi0xMi01LjM37My0xMi0xMiA1LjM3My0xMiAxMi0xMnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')]"></div>
+        <div class="container max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 w-full">
+                <div class="flex col-span-2 items-center gap-10 mb-10 lg:mb-0 md:gap-36">
+                    <ul>
+                        <h3 class="text-lg font-bold text-white mb-4">WAEC Services</h3>
+                        <li><a href="results-checker.html" class="py-1 font-normal text-gray-300 hover:text-white">Results Checker</a></li>
+                        <li><a href="attestation.html" class="py-1 font-normal text-gray-300 hover:text-white">Result Attestation</a></li>
+                    </ul>
+                    <ul>
+                        <h3 class="text-lg font-bold text-white mb-4">Pages</h3>
+                        <li><a href="blog.html" class="py-1 font-normal text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="py-1 font-normal text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                    <ul>
+                        <h3 class="text-lg font-bold text-white mb-4">Legal</h3>
+                        <li><a href="#" onclick="openLegalPopup('terms')" class="py-1 font-normal text-gray-300 hover:text-white">Terms</a></li>
+                        <li><a href="#" onclick="openLegalPopup('privacy')" class="py-1 font-normal text-gray-300 hover:text-white">Privacy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-3">Subscribe</h3>
+                    <p class="text-gray-300 mb-4 text-base">Get updates on WAEC services and announcements.</p>
+                    <form id="subscribeForm" class="w-full">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
+                            <div class="w-full">
+                                <input type="email" id="emailInput" required class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email address">
+                                <p id="subscribeMessage" class="mt-2 text-sm hidden"></p>
+                                <p class="mt-3 text-sm text-gray-400">I agree to the <a href="#" onclick="openLegalPopup('terms')" class="font-bold underline hover:text-white">Terms and Conditions</a></p>
+                            </div>
+                            <button type="submit" class="w-full lg:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <p class="text-center mt-16 text-gray-400">&copy; 2025 WAEC. All rights reserved. | Official Site: <a href="https://www.waecnigeria.org/" class="text-blue-400 hover:text-blue-300">waecnigeria.org</a></p>
+        </div>
+    </footer>
+
+    <!-- Legal Modal -->
+    <div id="legalModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 id="legalModalTitle" class="text-2xl font-bold text-gray-900"></h2>
+                    <button onclick="closeLegalPopup()" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+                </div>
+                <div id="legalModalContent" class="text-gray-700 leading-relaxed"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let subjectRowCount = 0;
+
+        const examGrades = {
+            wassce: ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"],
+            novdec: ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"],
+            bece: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+            abce: ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"],
+            gbce: ["A1", "B2", "B3", "C4", "C5", "C6", "D7", "E8", "F9"]
+        };
+
+        const subjectCosts = {
+            wassce: 350,
+            novdec: 350,
+            bece: 350,
+            abce: 130,
+            gbce: 135
+        };
+
+        const coreSubjects = {
+            wassce: ["English Language", "Mathematics (Core)", "Integrated Science", "Social Studies"],
+            novdec: ["English Language", "Mathematics (Core)", "Integrated Science", "Social Studies"],
+            bece: ["English Language", "Mathematics", "Integrated Science", "Social Studies"],
+            abce: [],
+            gbce: []
+        };
+
+        const electiveSubjects = {
+            wassce: ["Biology", "Chemistry", "Physics", "Elective Mathematics", "Economics", "Geography", "Government", "History", "Literature in English", "French", "ICT", "Business Management", "Financial Accounting", "Cost Accounting", "Clerical Office Duties", "Christian Religious Studies", "Islamic Studies", "Music", "Visual Arts", "General Agriculture", "Crop Husbandry", "Animal Husbandry", "Building Construction", "Technical Drawing", "Electronics"],
+            novdec: ["Biology", "Chemistry", "Physics", "Elective Mathematics", "Economics", "Geography", "Government", "History", "Literature in English", "French", "ICT", "Business Management", "Financial Accounting", "Cost Accounting", "Clerical Office Duties", "Christian Religious Studies", "Islamic Studies", "Music", "Visual Arts", "General Agriculture", "Crop Husbandry", "Animal Husbandry", "Building Construction", "Technical Drawing", "Electronics"],
+            bece: ["ICT", "French", "BDT (Home Economics)", "BDT (Pre-Technical)", "Religious & Moral Education"],
+            abce: ["Financial Accounting", "Business Management", "Business Law", "Marketing", "Information Technology", "Economics", "Cost Accounting", "Taxation", "Auditing", "Human Resource Management"],
+            gbce: ["Business Mathematics", "Commerce", "Financial Accounting", "Office Practice", "Economics", "Typewriting", "Shorthand", "Business English", "Marketing", "Business Law"]
+        };
+
+        function updateExamType() {
+            const examType = document.getElementById('examType').value;
+            subjectRowCount = 0;
+            loadCoreSubjects(examType);
+            document.getElementById('electivesContainer').innerHTML = '';
+            updateSubjectAmount();
+        }
+
+        function loadCoreSubjects(examType) {
+            const container = document.getElementById('coreSubjectsContainer');
+            container.innerHTML = `
+                <h3 class="text-lg font-semibold mb-3">Core Subjects</h3>
+                <div id="coreSubjectsList" class="space-y-3"></div>
+            `;
+            const subjectsList = document.getElementById('coreSubjectsList');
+            const subjects = coreSubjects[examType] || [];
+            
+            if (subjects.length === 0) {
+                subjectsList.innerHTML = '<p class="text-gray-600">No core subjects for this exam type.</p>';
+                return;
+            }
+            
+            // Add select all/none controls for mobile
+            subjectsList.innerHTML = `
+                <div class="flex flex-wrap gap-3 mb-2">
+                    <button type="button" onclick="selectAllCoreSubjects(true)" class="px-3 py-1.5 text-sm bg-blue-50 text-blue-700 rounded-md hover:bg-blue-100 transition-colors">
+                        Select All
+                    </button>
+                    <button type="button" onclick="selectAllCoreSubjects(false)" class="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors">
+                        Deselect All
+                    </button>
+                </div>
+            `;
+            
+            subjects.forEach(sub => {
+                subjectRowCount++;
+                const subjectId = `subject-${sub.toLowerCase().replace(/\s+/g, '-')}`;
+                const subjectCard = document.createElement('div');
+                subjectCard.className = 'bg-white p-4 rounded-lg border border-gray-200 shadow-sm hover:shadow transition-shadow';
+                subjectCard.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <div class="flex items-center">
+                            <input type="checkbox" 
+                                   id="${subjectId}" 
+                                   name="coreSubjects[]" 
+                                   value="${sub}" 
+                                   checked 
+                                   onchange="updateSubjectAmount()"
+                                   class="w-5 h-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                            <label for="${subjectId}" class="ml-2 block text-sm font-medium text-gray-900 cursor-pointer">
+                                ${sub}
+                            </label>
+                        </div>
+                        
+                        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2 sm:mt-0">
+                            <div class="flex flex-col">
+                                <label for="current-${subjectId}" class="text-xs text-gray-500 mb-1">Current Grade</label>
+                                <select id="current-${subjectId}" 
+                                        name="currentGrade[]" 
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    <option value="">Select Grade</option>
+                                    ${examGrades[examType].map(g => `<option value="${g}">${g}</option>`).join('')}
+                                    <option value="Pending">Pending</option>
+                                </select>
+                            </div>
+                            
+                            <div class="flex flex-col">
+                                <label for="target-${subjectId}" class="text-xs text-gray-500 mb-1">Target Grade</label>
+                                <select id="target-${subjectId}" 
+                                        name="targetGrade[]" 
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    <option value="">Select Grade</option>
+                                    ${examGrades[examType].map(g => `<option value="${g}">${g}</option>`).join('')}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                subjectsList.appendChild(subjectCard);
+            });
+            updateSubjectAmount();
+        }
+        
+        function selectAllCoreSubjects(select) {
+            const checkboxes = document.querySelectorAll('#coreSubjectsList input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = select;
+            });
+            updateSubjectAmount();
+        }
+
+        function addElectiveRow() {
+            const examType = document.getElementById('examType').value;
+            if (!examType) {
+                showMessage("Please select exam type first.", "error");
+                return;
+            }
+            if (subjectRowCount >= 9) {
+                showMessage("Maximum 9 subjects allowed.", "error");
+                return;
+            }
+            subjectRowCount++;
+            const container = document.getElementById('electivesContainer');
+            const rowId = `elective-${Date.now()}`;
+            
+            const row = document.createElement('div');
+            row.className = 'bg-white p-4 rounded-lg border border-gray-200 shadow-sm hover:shadow transition-shadow';
+            
+            row.innerHTML = `
+                <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                    <div class="flex items-center justify-between w-full sm:w-auto">
+                        <button type="button" 
+                                onclick="this.closest('div.bg-white').remove(); updateSubjectAmount()" 
+                                class="text-red-500 hover:text-red-700 p-1 -ml-2"
+                                aria-label="Remove subject">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </button>
+                        <span class="sm:hidden text-sm text-gray-500">Elective Subject</span>
+                    </div>
+                    
+                    <div class="flex-1">
+                        <label for="${rowId}-subject" class="sr-only">Subject Name</label>
+                        <input type="text" 
+                               id="${rowId}-subject"
+                               name="electiveSubjects[]" 
+                               placeholder="Enter subject name" 
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" 
+                               required>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3 w-full sm:w-auto">
+                        <div class="flex flex-col">
+                            <label for="${rowId}-current" class="text-xs text-gray-500 mb-1">Current</label>
+                            <select id="${rowId}-current" 
+                                    name="currentGrade[]" 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option value="">Grade</option>
+                                ${examGrades[examType].map(g => `<option value="${g}">${g}</option>`).join('')}
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex flex-col">
+                            <label for="${rowId}-target" class="text-xs text-gray-500 mb-1">Target</label>
+                            <select id="${rowId}-target" 
+                                    name="targetGrade[]" 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option value="">Grade</option>
+                                ${examGrades[examType].map(g => `<option value="${g}">${g}</option>`).join('')}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(row);
+            
+            // Auto-focus the new subject input
+            const input = document.getElementById(`${rowId}-subject`);
+            if (input) {
+                input.focus();
+                // Update amount when the user types in the elective subject
+                input.addEventListener('input', updateSubjectAmount);
+            }
+            
+            // Also update when the grade selectors change
+            const gradeSelects = document.querySelectorAll(`select[name="currentGrade[]"], select[name="targetGrade[]"]`);
+            gradeSelects.forEach(select => {
+                select.addEventListener('change', updateSubjectAmount);
+            });
+            
+            updateSubjectAmount();
+        }
+
+        function updateSubjectAmount() {
+            const examType = document.getElementById('examType').value;
+            const costPerSubject = subjectCosts[examType] || 0;
+            
+            // Count checked core subjects
+            const coreChecked = document.querySelectorAll('input[name="coreSubjects[]"]:checked').length;
+            
+            // Count filled elective subjects (where the input has a value)
+            const electiveInputs = document.querySelectorAll('input[name="electiveSubjects[]"]');
+            let electiveCount = 0;
+            
+            electiveInputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    electiveCount++;
+                }
+            });
+            
+            // Update the total count and amount
+            subjectRowCount = coreChecked + electiveCount;
+            const totalAmount = subjectRowCount * costPerSubject;
+            
+            // Update the displayed amount with proper formatting
+            document.getElementById('subjectAmount').textContent = `GHC ${totalAmount}`;
+            
+            // Also update the hidden input if it exists (for form submission)
+            const totalAmountInput = document.getElementById('totalAmount');
+            if (totalAmountInput) {
+                totalAmountInput.value = totalAmount;
+            }
+            
+            return totalAmount;
+        }
+
+        function showMessage(message, type = 'info') {
+            const existing = document.querySelector('.message-toast');
+            if (existing) existing.remove();
+            const div = document.createElement('div');
+            div.className = `message-toast fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 ${type === 'error' ? 'bg-red-100 border-l-4 border-red-500 text-red-700' : 'bg-green-100 border-l-4 border-green-500 text-green-700'}`;
+            div.innerHTML = `<div class="flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${type === 'error' ? 'M6 18L18 6M6 6l12 12' : 'M5 13l4 4L19 7'}"></path></svg><span>${message}</span></div>`;
+            document.body.appendChild(div);
+            setTimeout(() => div.remove(), 3000);
+        }
+
+        function openLegalPopup(type) {
+            const modal = document.getElementById('legalModal');
+            const title = document.getElementById('legalModalTitle');
+            const content = document.getElementById('legalModalContent');
+            const legalContent = {
+                'terms': { title: 'Terms and Conditions', content: '<p>Official WAEC terms: No grade upgrades. Payments via Telecel Cash or official WAEC channels only.</p>' },
+                'privacy': { title: 'Privacy Policy', content: '<p>WAEC protects your data per official policy. See waecgh.org for details.</p>' }
+            };
+            if (legalContent[type]) {
+                title.textContent = legalContent[type].title;
+                content.innerHTML = legalContent[type].content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLegalPopup() {
+            document.getElementById('legalModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function validateForm() {
+            const form = document.getElementById('requestForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return false;
+            }
+            const email = document.getElementById('email').value;
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return false;
+            }
+            const phone = document.getElementById('phoneNumber').value;
+            if (!/^\+?[0-9\s-]{10,}$/.test(phone)) {
+                showMessage('Please enter a valid phone number.', 'error');
+                return false;
+            }
+            const coreChecked = document.querySelectorAll('input[name="coreSubjects[]"]:checked').length;
+            const electiveSelected = document.querySelectorAll('select[name="electiveSubjects[]"] option:checked:not([value=""])').length;
+            if (coreChecked + electiveSelected === 0) {
+                showMessage('Please select at least one subject.', 'error');
+                return false;
+            }
+            return true;
+        }
+
+        function collectFormData() {
+            const form = document.getElementById('requestForm');
+            const formData = new FormData(form);
+            const data = {};
+            
+            // Get all form fields including checkboxes and selects
+            form.querySelectorAll('input, select, textarea').forEach(field => {
+                if (field.type === 'checkbox' || field.type === 'radio') {
+                    if (field.checked) {
+                        if (!data[field.name]) data[field.name] = [];
+                        if (Array.isArray(data[field.name])) {
+                            data[field.name].push(field.value);
+                        } else {
+                            data[field.name] = [data[field.name], field.value];
+                        }
+                    }
+                } else if (field.type === 'file') {
+                    // For file inputs, we'll just get the filename
+                    if (field.files && field.files[0]) {
+                        data[field.name] = field.files[0].name;
+                    }
+                } else if (field.name) {
+                    data[field.name] = field.value;
+                }
+            });
+            
+            // Convert arrays to comma-separated strings for URL parameters
+            Object.keys(data).forEach(key => {
+                if (Array.isArray(data[key])) {
+                    data[key] = data[key].join(',');
+                }
+            });
+            
+            return data;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('requestForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (validateForm()) {
+                    const formData = collectFormData();
+                    const queryParams = new URLSearchParams(formData).toString();
+                    window.location.href = `upgrade-success.html?${queryParams}`;
+                }
+            });
+
+            document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('emailInput').value;
+                const messageEl = document.getElementById('subscribeMessage');
+                if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    messageEl.textContent = 'Thank you for subscribing!';
+                    messageEl.className = 'mt-2 text-sm text-green-400';
+                } else {
+                    messageEl.textContent = 'Please enter a valid email.';
+                    messageEl.className = 'mt-2 text-sm text-red-400';
+                }
+                setTimeout(() => messageEl.className = 'mt-2 text-sm hidden', 5000);
+            });
+
+            document.getElementById('legalModal').addEventListener('click', function(e) {
+                if (e.target === this) closeLegalPopup();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLegalPopup();
+            });
+        });
+    </script>
+</body>
+</html>
